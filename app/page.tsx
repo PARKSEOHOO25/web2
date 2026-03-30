@@ -1,65 +1,45 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <div className="max-w-4xl mx-auto p-4">
+      <header className="mb-6">
+        <h1 className="text-2xl font-bold">홍길동 블로그</h1>
+        <nav>
+          <ul className="flex gap-4 mt-2">
+            <li><a href="/" className="text-blue-600 hover:underline">홈</a></li>
+            <li><a href="/about" className="text-blue-600 hover:underline">소개</a></li>
+            <li><a href="/contact" className="text-blue-600 hover:underline">연락</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main className="space-y-4">
+        <article className="bg-white rounded-lg shadow p-6 hover:shadow-lg transition">
+          <h2 className="text-lg font-bold">첫 번째 게시글 제목</h2>
+          <p className="text-gray-600 mt-2">게시글 내용 미리보기입니다. 이 부분은 게시글의 일부 내용을 보여줍니다.</p>
+          <div className="mt-4 flex items-center gap-4 text-sm text-gray-500">
+            <span>작성자: 홍길동</span>
+            <span className="text-gray-400">날짜: 2023-10-01</span>
+          </div>
+        </article>
+        <article className="bg-white rounded-lg shadow p-6 hover:shadow-lg transition">
+          <h2 className="text-lg font-bold">두 번째 게시글 제목</h2>
+          <p className="text-gray-600 mt-2">또 다른 게시글 내용 미리보기입니다. 흥미로운 내용을 담고 있습니다.</p>
+          <div className="mt-4 flex items-center gap-4 text-sm text-gray-500">
+            <span>작성자: 홍길동</span>
+            <span className="text-gray-400">날짜: 2023-10-02</span>
+          </div>
+        </article>
+        <article className="bg-white rounded-lg shadow p-6 hover:shadow-lg transition">
+          <h2 className="text-lg font-bold">세 번째 게시글 제목</h2>
+          <p className="text-gray-600 mt-2">마지막 게시글 내용 미리보기입니다. 더 많은 내용을 확인해보세요.</p>
+          <div className="mt-4 flex items-center gap-4 text-sm text-gray-500">
+            <span>작성자: 홍길동</span>
+            <span className="text-gray-400">날짜: 2023-10-03</span>
+          </div>
+        </article>
       </main>
+      <footer className="mt-8 text-center text-sm text-gray-500">
+        <p>&copy; 2023 홍길동 블로그. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
