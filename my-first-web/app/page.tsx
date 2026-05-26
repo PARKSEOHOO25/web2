@@ -1,25 +1,13 @@
 export default function Home() {
   return (
-    <div className="max-w-4xl mx-auto p-4">
-      <header className="mb-8">
-        <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-bold">블로그 소개 페이지</h1>
-          <nav className="mt-3 flex gap-4 text-sm text-gray-700">
-            <a href="#home" className="hover:underline">
-              홈
-            </a>
-            <a href="#posts" className="hover:underline">
-              게시글
-            </a>
-            <a href="#about" className="hover:underline">
-              소개
-            </a>
-          </nav>
-        </div>
-      </header>
-
-      <main>
-        <section id="posts" className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <>
+      <h1 className="text-4xl font-bold mb-4">내 블로그</h1>
+      <p className="text-lg text-gray-600">
+        여기는 제 블로그입니다. 다양한 주제에 대한 글을 공유합니다.
+      </p>
+    </>
+  );
+}
           <article className="rounded-lg bg-white p-6 shadow transition hover:shadow-lg">
             <h2 className="text-lg font-bold">첫 번째 게시글 제목</h2>
             <p className="mt-3 text-gray-600">
