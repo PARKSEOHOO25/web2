@@ -1,65 +1,57 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="max-w-4xl mx-auto p-4">
+      <header className="mb-8">
+        <div className="flex justify-between items-center">
+          <h1 className="text-2xl font-bold">블로그 소개 페이지</h1>
+          <nav className="mt-3 flex gap-4 text-sm text-gray-700">
+            <a href="#home" className="hover:underline">
+              홈
+            </a>
+            <a href="#posts" className="hover:underline">
+              게시글
+            </a>
+            <a href="#about" className="hover:underline">
+              소개
+            </a>
+          </nav>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+      </header>
+
+      <main>
+        <section id="posts" className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <article className="rounded-lg bg-white p-6 shadow transition hover:shadow-lg">
+            <h2 className="text-lg font-bold">첫 번째 게시글 제목</h2>
+            <p className="mt-3 text-gray-600">
+              이곳은 첫 번째 게시글의 내용 미리보기입니다. 게시글의 핵심 내용을 간단히 확인할 수 있습니다.
+            </p>
+            <p className="mt-4 text-gray-600">작성자: 박서후</p>
+            <p className="text-sm text-gray-400">날짜: 2026-05-26</p>
+          </article>
+
+          <article className="rounded-lg bg-white p-6 shadow transition hover:shadow-lg">
+            <h2 className="text-lg font-bold">두 번째 게시글 제목</h2>
+            <p className="mt-3 text-gray-600">
+              이곳은 두 번째 게시글의 내용 미리보기입니다. 주요 아이디어와 요약을 포함합니다.
+            </p>
+            <p className="mt-4 text-gray-600">작성자: 이영희</p>
+            <p className="text-sm text-gray-400">날짜: 2026-05-24</p>
+          </article>
+
+          <article className="rounded-lg bg-white p-6 shadow transition hover:shadow-lg">
+            <h2 className="text-lg font-bold">세 번째 게시글 제목</h2>
+            <p className="mt-3 text-gray-600">
+              이곳은 세 번째 게시글의 내용 미리보기입니다. 독자가 다음 내용을 궁금하게 만드는 글입니다.
+            </p>
+            <p className="mt-4 text-gray-600">작성자: 박철수</p>
+            <p className="text-sm text-gray-400">날짜: 2026-05-22</p>
+          </article>
+        </section>
       </main>
+
+      <footer className="mt-8 text-center text-sm text-gray-400">
+        <p>© 2026 블로그 소개 페이지</p>
+      </footer>
     </div>
   );
 }
